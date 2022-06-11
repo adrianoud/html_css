@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--    head里面的东西出现不在网页中-->
+    <meta charset="UTF-8">
+    <title>hello</title>
+</head>
+<body>
+<div style="width:100px;height:100px;background-color:green"></div>
+<h1 id="hello">home</h1>
+<button id="btn1" style="height:20px;width:40px">Click</button>
+<p>abcdfgh<font color="red" size="10">ABC</font>CDDDD</p>
+<p>b</p>
+<ul>城市
+    <li>北京</li>
+    <li>上海</li>
+</ul>
+
+
+<!--
+    自结束标签
+    注释不能嵌套
+-->
+<img src="constant_p.jpg">
+<input>
+<script>
+window.onload = function(){
+    pp = document.getElementById('hello');
+    bt = document.getElementById('btn1');
+    bt.onclick = function(){
+        pp.innerHTML="GAILE"
+        };
+    console.log('hello');
+}
+</script>
+
+</body>
+</html>

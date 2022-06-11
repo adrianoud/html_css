@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>size of box</title>
+
+<!--
+
+box-sizing 来规定width和height属性设定值作用的对象
+    设定为 content-box 为内容区，默认
+    设定为 border-box 为盒子的可见区域
+
+轮廓和圆角
+    轮廓 outline,不影响可见框的大小，用法和border一样
+    阴影 box-shadow 不影响可见框的大小
+        水平偏移量，默认整下方
+        垂直偏移量，
+        模糊半径
+        颜色，
+    圆角 border-radius
+        有四个方向border-top-left-radius
+        四个值：左上，右上，右下，左下
+        50%可以设置圆形
+Float
+    在父元素内部左右漂移
+    默认值 none 不浮动
+        left 向左
+        right 向右
+    设置为float
+        水平布局等式失效，外边距没了
+        从文档流中脱离，脱流，不占据文档中的位置
+        还是在父元素中
+        不会超过前面的浮动元素，不能超过前面的兄弟元素
+        如果浮动元素上方为非浮动块元素，无法向上移动
+        浮动元素不会盖住文字
+        从文档流脱离以后，元素特点也会发生变化，脱流以后（脱流的特点）：
+            不在需要区分块元素和行内元素
+            块元素
+                不再独占一行
+                宽度和高度被内容撑开
+            行内元素
+                会变成块元素
+                宽高生效
+
+
+
+-->
+    <style>
+        *{
+        margin:0;
+        padding:0;
+        }
+
+        .box1{
+        width: 200px;
+        height: 200px;
+        background-color: #bfa;
+        padding: 10px;
+        box-sizing: content-box;
+/*      border-radius:5%; */
+        float: left
+        }
+
+        .box1:hover{
+/*      outline: 20px green solid; */
+        box-shadow: 30px 30px 10px rgba(0,0,0,0.3);
+        }
+
+        .box2{
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+        padding: 10px;
+        box-sizing: content-box;
+        float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

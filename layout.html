@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>layout</title>
+</head>
+<style>
+    *{
+    margin:0;
+    padding:0;
+    }
+
+    li{
+    list-style-type:none;
+    }
+
+    header{
+    width:auto;
+    height:100px;
+    background-color:silver;
+    }
+
+    main{
+    width:auto;
+    overflow:hidden;
+    background-color:#bfa;
+    margin:10px 0
+    }
+
+    main nav{
+    float:left;
+    width:9%;
+    height:600px;
+    background-color:yellow;
+    }
+
+
+    nav a{
+    display:block;
+    height:35px;
+    padding:0 30px;
+
+    text-decoration:none;
+    line-height:35px;
+    }
+
+    nav a:hover{
+    background-color:gray;
+    }
+
+    main article{
+    float:left;
+    width:80%;
+    height:600px;
+    background-color:blue;
+    margin:0 1%
+    }
+
+    main aside{
+    float:left;
+    width:9%;
+    height:600px;
+    background-color:red;
+    }
+
+    footer{
+    width:auto;
+    height:150px;
+    background-color:orange;
+    }
+
+</style>
+<body>
+    <header></header>
+    <main>
+        <nav>
+            <ul>
+                <li><a href="#">链接1</a></li>
+                <li><a href="#">链接2</a></li>
+                <li><a href="#">链接3</a></li>
+            </ul>
+        </nav>
+        <article></article>
+        <aside></aside>
+    </main>
+    <footer></footer>
+</body>
+</html>

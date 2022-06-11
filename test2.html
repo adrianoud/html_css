@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="#bottom">去底部</a>
+<!--独占一行称为块元素 （block element）
+包括h1~h6
+p标签
+em 标签，代表语气加重，不换行 非block, 行内元素，内联元素 inline element
+strong  表示重要内容
+blockquote 表示一个长引用
+q 短引用，非独占一行
+br 表示换行
+
+-->
+<hgroup>
+    <h1>一级标题，一般只有一个H1,重要性高</h1>
+    <h6>六级</h6>
+</hgroup>
+
+<p>只解析     <em>一个</em>    空格</p>
+<p>hello &nbsp;&nbsp;world</p>
+<p>a&#215;b</p>
+<!--html转移符号
+&nbsp; 空格
+&gt;  大于
+&lt;   小于
+-->
+<p>x<sub>2</sub></p>
+<p>y<sup>2</sup></p>
+<blockquote>
+    never said that
+</blockquote>
+<q>哈哈哈</q>
+
+<!--
+块元素用于布局
+行内元素主要用来设定效果
+一般在块元素中放行内元素
+p元素中不能放块
+header
+main
+footer
+nav 表示网页中的导航
+aside 表示和主体相关的替他内容（侧边栏）
+article 独立的文章
+section 表示一个独立的区块
+div 没有语义，就是表示一个区块
+显示没有区别。只关注语义
+-->
+
+<!--
+行内元素
+span 一般用于网页中选中文字
+-->
+
+<!--
+列表
+一共三种
+有序类别 ol
+无序列表 ul
+    可以嵌套
+定义列表 dl
+    dt 表示定义内容
+    dd 解释说明
+-->
+<ul>
+    <li>铅笔</li>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+        </ul>
+    <li>尺子</li>
+</ul>
+
+<ol>
+    <li>铅笔</li>
+    <li>尺子</li>
+    <li>尺子</li>
+</ol>
+
+<dl>
+    <dt>你</dt>
+    <dd>第二人称</dd>
+    <dt>他</dt>
+    <dd>第三人称</dd>
+</dl>
+
+<!--
+img
+自结束标签
+替换元素，介于块元素和行内元素
+不是显示本身，而是引入的资源
+alt 是描述,无法加载时显示，可以给搜索引擎搜索
+width 单位px
+-->
+<img src="constant_p.jpg" alt="曲线" width="600px">
+<br>
+
+<!--
+超链接，跳转到其他网页或者文档的其他的位置
+也是行内元素
+不能嵌套
+href 属性 目标
+target 属性 超链接打开的位置
+_self 默认值，在当前页面打开
+_blank 在新的页面中打开
+相对路径
+./ 默认值，当前文件所在目录
+../ 当前文件所在目录上一层目录
+
+回到顶部 #
+回到id的元素 #id
+
+javascript:; 占位符
+-->
+<a href="test1.html" target="_self">本窗口</a>
+<br>
+<br>
+<a href="test1.html" target="_blank">新窗口</a>
+<br>
+<br>
+<a href="javascript:;" >无效链接</a>
+<br>
+<br>
+<a id="bottom" href="#">回到顶部</a>
+
+</body>
+</html>
