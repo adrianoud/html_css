@@ -2,9 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>clearFix</title>
 </head>
+<style>
+    .box1{
+    width:200px;
+    background: #bfa;
+    border: 10px red solid;
+
+    }
+
+    .box2{
+    width:100px;
+    height:100px;
+    background: orange;
+    float:left;
+    }
+
+    .box3{
+    width:100px;
+    height:100px;
+    background: red;
+    clear:left;
+    }
+
+    .clearfix::before,
+    .clearfix::after{
+        content:'';
+        display:table;
+        clear:both;
+    }
+
+</style>
+
+
+
+
 <body>
 
+    <div class="box2"></div>
+
+    <div class="box3"> </div>
 </body>
 </html>

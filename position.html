@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定位</title>
+</head>
+<style>
+    body{
+    height:3000px;
+    }
+
+    .box1{
+        width:200px;
+        height:200px;
+        background-color:#bfa;
+        margin-top:5px;
+        font-size:50px;
+        text-decoration:underline red dotted
+    }
+
+    #move{
+    background-color:rgba(255,0,0,0.3);
+    position:absolute;
+    top: 100px;
+    }
+
+</style>
+
+<!--
+定位
+    高级布局手段
+    可以摆放到任意位置
+    position：
+        可选值
+            static 默认，不开启定位
+            relative, 开启相对定位
+            absolute, 绝对定位
+            fixed， 固定定位
+            sticky， 粘滞定位
+        相对定位
+            position:relative，
+                元素不变，设定offset才会移动
+                参照元素在文档流里的原来的位置
+                会提升元素的层次
+                不会脱离文档流
+                不会改变元素的性质，block
+            offset: 开启后使用偏移量来设定位置，和margin的区别是不影响其他元素，
+                top, 上边距离，越大越靠下
+                bottom，下边距离，通常和top选一个使用来确定垂直位置
+                left，左边距离
+                right 右侧距离
+        绝对定位
+            position: absolute
+                位置不变
+                脱流
+                性质变为行内变成快，宽高被内容撑开
+                提升层级
+                相对与其包含块进行定位，指开启定位的最近的祖先块元素，所有都没开，就依据根元素html
+                    包含块（containing block）
+                        包含块：
+                            -正常元素，最近的祖先块元素
+                            -开启绝对定位元素：开启定位的最近的祖先块元素
+
+        固定定位
+            position：fixed
+                也是一种绝对定位，大部分和固定定位一致
+                固定定位永远参照视口进行定位
+                不会随滚动条滚动
+
+        粘滞定位
+            position：sticky
+                和相对定位基本一致，可以到达某个位置时固定
+
+        布局
+            水平9个属性和 =  包含块宽度
+            垂直9个属性和 =  包含块高度
+
+        层级
+            开启定位的元素，使用z-index来指定元素的层级
+            层级越高优先显示
+            层级一样，优先显示靠下的
+            祖先元素层级再高也不会盖住后代元素
+
+        字体
+            font
+                color
+                font-size
+                font-family
+                    可选值
+                        serif 衬线字体
+                        sans-serif 非衬线字体
+                        monospace 等宽字体
+                    多个字体用逗号隔开，优先使用第一个
+                    @font-face 可以将服务器字体直接给用户使用
+                        @font-face{
+                            font-family: xxx;   起名字
+                            scr: url();
+                        }
+
+        图标字体库
+            font-awesome
+                1, 下载  fontawesome.com
+                2, 解压
+                3, 将css和webfonts移动到项目中
+                4, 将all.css 引入
+                5, 使用
+                    直接使用类名来使用图标
+                        class = "fas fa-bell"
+                    通过伪元素来设置
+                    content： 编码
+                    font-family：“Font Awesome 5 Brands”
+                    font-weight:
+            也可以用ali fondicon
+
+        行高
+            line-height
+            默认行高 1.333倍字体
+
+        font 的简写
+            font: 字体大小/行高 字体族
+
+        font-weight  加粗  bold / normal
+        font-style  italic  / normal
+
+        文本的对齐
+            水平对齐
+                text-align:left 默认值，左对齐
+                right
+                center  居中对其
+                justify 两端对其
+            垂直对齐
+                vertical-align:
+                    baseline 默认值，基线对齐
+                    top 顶部对其
+                    bottom 底部对齐
+                    middle 居中对齐
+            white-space:
+                normal 如何处理空白
+                nowrap 不换行
+                pre   保留空白
+            text-overflow: ellipsis
+
+        雪碧图
+            一次性将图片加载进页面，加快请求速度
+            使用方法
+                确定图标
+                测量大小
+                创建元素
+                设置为背景
+                设置position
+
+
+
+
+-->
+
+<body>
+
+    <div class="box1"></div>
+    <div class="box1" id="move">aaa</div>
+    <div class="box1"></div>
+
+</body>
+</html>
